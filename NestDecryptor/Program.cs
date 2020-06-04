@@ -12,7 +12,7 @@ namespace NestDecryptor
             string cyphertext = Console.ReadLine();
             if (!string.IsNullOrEmpty(cyphertext))
             {
-                Console.WriteLine(decryptor.DecryptString(cyphertext));
+                Console.WriteLine(decryptor.DecryptString2(cyphertext));
             } else
             {
                 Console.WriteLine("No input detected! Quitting!");

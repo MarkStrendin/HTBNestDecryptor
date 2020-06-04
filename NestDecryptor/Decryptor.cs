@@ -24,7 +24,7 @@ namespace NestDecryptor
             cipherTextBytes = Convert.FromBase64String(cipherText);
 
             Rfc2898DeriveBytes password = new Rfc2898DeriveBytes(passPhrase, saltValueBytes, passwordIterations);
-
+            
             byte[] keyBytes;
             keyBytes = password.GetBytes(System.Convert.ToInt32(keySize / (double)8));
 
@@ -61,6 +61,14 @@ namespace NestDecryptor
                 return string.Empty;
             else
                 return Decrypt(EncryptedString, "N3st22", "88552299", 2, "464R5DFA5DL6LE28", 256);
+        }
+
+        public string DecryptString2(string EncryptedString)
+        {
+            if (string.IsNullOrEmpty(EncryptedString))
+                return string.Empty;
+            else
+                return Decrypt(EncryptedString, "667912", "1313Rf99", 3, "1L1SA61493DRV53Z", 256);
         }
     }
 }
